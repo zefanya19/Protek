@@ -1,0 +1,22 @@
+dataFile = open('datamahasiswa.txt', 'r')
+
+dataList = []
+
+data = dataFile.readlines()
+
+for x in range(len(data)):
+    bercabangData = data[x].split('|')
+    dataDict = {'NIM': bercabangData[0],
+                'nama mahasiswa': bercabangData[1],
+                'alamat': bercabangData[2].replace('\n', ' ')}
+    dataList.append(dataDict)
+
+print(dataList)
+
+dataFile.close()
+
+
+
+
+
+
